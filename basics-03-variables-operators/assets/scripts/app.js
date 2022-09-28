@@ -15,6 +15,24 @@
 const defaultResult = 0; //value in here will never change
 let currentResult = defaultResult; //intialized the variable
 
+// Now we introduced a constant and you might be wondering if we're not implicitly still changing the constant
+
+// with our code because I initialize current result with the value which is stored in my constant and
+
+// since I thereafter change current result, you could think that implicitly we also change the constant, right,
+
+// because we set those equal in this line
+
+// but it's important to understand that indeed we are not changing the constant here because here, we are
+
+// copying the value that's in a constant into this brand new variable.
+
+// So if we thereafter change the variable, we're changing the copy, the original constant and its value are
+
+// untouched
+
+// if we then change the variable, that's something important to keep in mind here or to understand. An
+
 currentResult = (currentResult + 10) * 3 / 2 - 1;
 
 let calculationDescription = '(' + defaultResult + ' + 10) * 3 / 2 - 1';
