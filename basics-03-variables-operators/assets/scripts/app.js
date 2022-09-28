@@ -12,7 +12,7 @@
 
 // It would be pretty bad if that would be the case because then you could never do anything in your code.
 
-const defaultResult = 0; //value in here will never change
+const defaultResult = 0; //value in here will never change because it is const
 let currentResult = defaultResult; //intialized the variable
 
 // Now we introduced a constant and you might be wondering if we're not implicitly still changing the constant
