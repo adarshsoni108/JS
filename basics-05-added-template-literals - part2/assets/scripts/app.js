@@ -3,73 +3,78 @@ let currentResult = defaultResult;
 
 currentResult = (currentResult + 10) * 3 / 2 - 1;
 
-//let calculationDescription = '(' + defaultResult + ' + 10) * 3 / 2 - 1';
+// Now some additional information about strings and template literals as we have it here.
 
-// We're building our string here with three pieces of text you could say, with the opening parentheses,
+// One convenient thing about template literals is that you can easily write multiline strings there. Now
 
-// with this code thereafter or with this text thereafter and with the value that's stored in default result.
+// with multiline strings, I mean strings which really do have a line break in them.
 
-// Now in such cases, you can actually also use back ticks instead of single quotes.
+// So let's say here in front of the asterisk character, I add a couple of line breaks and hence this string
 
-// So this is now not a single quote,
+// looks like that might look a bit strange at first but this is valid Javascript syntax,
 
-// this is the back tick character which you'll find on your keyboard, get rid of all other single quotes
+// we opened a string here, we close it here and since it is a template literal with back ticks, this is
 
-// you actually have and get rid of these pluses you used to combine your strings, only keep the plus which
+// allowed. For a normal string with single or double quotes, this would not be allowed but I will come back
 
-// you want to output on the page and replace the closing single quote
+// to that. Now if you save that and you reload this in the browser, you'll not see a difference, though if
 
-// also with the closing back tick or with the back tick.
+// you have the developer tools opened which you can always open with view
 
-// So now I got two back ticks which surround my text and therefore now if I save this, unsurprisingly here
+// developer, developer tools and you then click on this select icon there and you select this part of
 
-// I say default result instead of the value which is actually stored in that default result constant
+// your webpage, you will see that indeed the whitespace is considered here,
 
-// but now back ticks give you access to a special syntax.
+// it's just the browser and the default behavior of the browser and the h2 element that basically strips
 
-// You can now use a dollar sign in here and then an opening and closing curly brace and now you can put
+// this redundant whitespace but it's output there and depending on where you output this, in which element
 
-// your variable or any expression which yields some result, which can be output as text,
+// and how that element is styled, you might also get that whitespace or the extra line break here in your
 
-// so you could also have a calculation like one plus one in here, so you can put that between your opening
+// webpage.
 
-// and closing curly braces
+// So the fact that we don't see the line break here in the middle is really just due to how this is styled
 
-// now and what this does is it tells Javascript to output the value that's in this constant in this case in
+// and rendered.
 
-// this place of your text. So it will not output the dollar sign or the curly brace,
+// If you go down here to the elements style of the h2 element which is selected and you add whitespace
 
-// instead it will output the value of the expression as it's called,
+// pre for example, then you will see the whitespace here as well because this is some CSS styling
 
-// so in this case of the constant you have between the opening and closing curly brace. So if you now save
+// which does not omit the extra whitespace but instead render it, here in this case that means it renders
 
-// that file and you reload, you'll see zero here which indeed is the value we have in default
+// this extra line break. So you can easily add line breaks here when using the template literal syntax,
 
-// result. This only works with back ticks, if you used single or double quotes,
+// this can help you with readability because you might be able to read long strings easier or better here
 
-// this dollar sign curly brace thing would be treated as regular text and therefore output as such as you
+// in the IDE if you add line breaks but you should always keep in mind that this is not just a visual
 
-// can see.
+// thing for you in the IDE but that the line breaks really are part of the string.
 
-// So this is a really nice feature, using these back tics with this dollar sign curly brace thing,
+// The same is true if you indent this, for example you could think that if you write it like this, it's
 
-// if you have some text in which you want to embed or inject some dynamic value, so the result of some
+// a normal string but it's more readable to you as a developer.
 
-// calculation or the value that's stored in a variable or a constant, then this is simply shorter, it saves
+// Well if you save that and you reload, our styling will be lost because we reloaded but here on the right
 
-// you the manual string concatenation which we previously had to do where we combined multiple strings with
+// you can see this extra whitespace,
 
-// the plus operator,
+// it really is part of the string and if we re-add this style here to our h2 element here in the developer
 
-// this is simply a bit shorter and therefore how you typically would build a string that includes dynamic
+// tools by setting whitespace to pre, you see we really do have the line break and the extra whitespace
 
-// values.
+// in here. So be careful when you use that and really only use the line break or extra whitespace feature
 
-// This overall construct here is called a template literal, so if you ever Google for Javascript template
+// here
 
-// literal, you'll find exactly this piece of syntax.
+// if you want to build a string that has the extra whitespace or that has the line break, don't do it just
 
-//important links (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation)
-let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
+// for readability.
+
+// Now if I come back to normal strings, there
+let calculationDescription = `(${defaultResult} + 10)
+
+
+* 3 / 2 - 1`;
 
 outputResult(currentResult, calculationDescription);
