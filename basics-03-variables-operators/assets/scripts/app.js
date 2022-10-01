@@ -38,3 +38,53 @@ currentResult = (currentResult + 10) * 3 / 2 - 1;
 let calculationDescription = '(' + defaultResult + ' + 10) * 3 / 2 - 1';
 
 outputResult(currentResult, calculationDescription);
+
+
+// Well there are numbers which I just used
+
+// and of course not just positive, non-decimal numbers but also negative numbers like -3 or numbers
+
+// with decimal places like 22.956
+
+// and important here, numbers with decimal places,
+
+// so like 22.956 are called floats or floating point numbers,
+
+// numbers without decimal places like here, 2 or -3, are called integers.
+
+// Now you of course use numbers for any code where you need to calculate something or where you just need
+
+// to work with a number
+
+// and of course typically that's a lot of code, whether you're having a calculator like we're writing it
+
+// or you're working with some prices or something like that,
+
+// you would typically work with numbers of course.
+
+// Now you don't just have numbers in code
+
+// however, sometimes you also need text,
+
+// let's say you're working with the name of a user who logged in
+
+// or you want to show a message to the user, then you're working with text or also called strings and
+
+// it's not just called strings in Javascript but in other programming languages as well,
+
+// so if I say a string, I mean a text type.
+
+// Now you can actually create a string by wrapping your text between single quotes, double quotes or these
+
+// back ticks here which you find on your keyboard,
+
+// all three creates a valid string.
+
+// You can use whatever you want, you just should be consistent though
+
+// the third option here, the back ticks,
+
+// that's kind of special,
+
+// Numbers 2,-3,22.35
+// Strings (Text) 'Hi',"Hi",`Hi`
